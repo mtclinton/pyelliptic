@@ -1,3 +1,6 @@
+import os
+
+
 class CurveParams:
     def __init__(self):
         self.P = 0  # the order of the underlying field
@@ -191,3 +194,49 @@ class CurveParams:
     def scalar_base_mult(self, k):
 
         return self.scalar_mult(self.Gx, self.Gy, k)
+
+
+mask = [0xFF, 0x1, 0x3, 0x7, 0xF, 0x1F, 0x3F, 0x7F]
+
+
+def generate_key(curve):
+    bit_size = 384
+    byte_len = (bit_size + 7) // 8
+    priv = bytearray(byte_len)
+    x, y = 0, 0
+    while x == 0:
+        priv = os.urandom(byte_len)
+        priv = (
+            (priv[0] & mask[bit_size % 8]).to_bytes(1, byteorder="big")
+            + (priv[1] ^ 0x42).to_bytes(1, byteorder="big")
+            + priv[2:]
+        )
+
+        x, y = curve.scalar_base_mlt(priv)
+
+    return priv, x, y
+
+
+def marshall(curve, x, y):
+    byte_len = (curve.BitSize + 7) // 8
+
+    ret = bytearray(1 + 2 * byte_len)
+    ret[0] = 4  # uncompressed point
+
+    x_bytes = x.to_bytes((x.bit_length() + 7) // 8, byteorder="big")
+    ret[1 + byte_len - len(x_bytes) : 1 + byte_len] = x_bytes
+    y_bytes = y.to_bytes((y.bit_length() + 7) // 8, byteorder="big")
+    ret[1 + 2 * byte_len - len(y_bytes) : 1 + 2 * byte_len] = y_bytes
+    return bytes(ret)
+
+
+def unmarshall(curve, data):
+    byte_len = (curve.BitSize + 7) >> 3
+    if len(data) != 1 + 2 * byte_len:
+        return 0, 0
+    if data[0] != 4:
+        return 0, 0
+
+    x = int.from_bytes(data[1 : 1 + byte_len], byteorder="big")
+    y = int.from_bytes(data[1 + byte_len :], byteorder="big")
+    return x, y
