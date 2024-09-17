@@ -266,7 +266,7 @@ p224_test_data = [
 
 
 @pytest.mark.parametrize("p224_test_value", p224_test_data)
-def test_p22_on_curve(p224_test_value):
+def test_p224_on_curve(p224_test_value):
     p224_curve = p224Curve()
     p224_curve.P = int(
         "26959946667150639794667015087019630673557916260026308143510066298881"
@@ -283,3 +283,23 @@ def test_p22_on_curve(p224_test_value):
     p224_from_big(p224_curve.gy, p224_curve.Gy)
     p224_from_big(p224_curve.b, p224_curve.B)
     p224_curve.is_on_curve(int(p224_test_value["x"], 16), int(p224_test_value["y"], 16))
+
+
+@pytest.mark.parametrize("p224_test_value", p224_test_data)
+def test_p224_scalar_mult(p224_test_value):
+    p224_curve = p224Curve()
+    p224_curve.P = int(
+        "26959946667150639794667015087019630673557916260026308143510066298881"
+    )
+    p224_curve.N = int(
+        "26959946667150639794667015087019625940457807714424391721682722368061"
+    )
+    p224_curve.B = int("b4050a850c04b3abf54132565044b0b7d7bfd8ba270b39432355ffb4", 16)
+    p224_curve.Gx = int("b70e0cbd6bb4bf7f321390b94a03c1d356c21122343280d6115c1d21", 16)
+    p224_curve.Gy = int("bd376388b5f723fb4c22dfe6cd4375a05a07476444d5819985007e34", 16)
+    p224_curve.BitSize = 224
+    k_int = int(p224_test_value["k"], 10)
+    k_bytes = k_int.to_bytes((k_int.bit_length() + 7) // 8, "big")
+    gen_x, gen_y = p224_curve.scalar_base_mult(k_bytes)
+    assert gen_x == int(p224_test_value["x"], 16)
+    assert gen_y == int(p224_test_value["y"], 16)
