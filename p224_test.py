@@ -263,6 +263,7 @@ p224_test_data = [
         "y": "42C89C774A08DC04B3DD201932BC8A5EA5F8B89BBB2A7E667AFF81CD",
     },
 ]
+
 P224 = p224Curve()
 P224.P = int("26959946667150639794667015087019630673557916260026308143510066298881")
 P224.N = int("26959946667150639794667015087019625940457807714424391721682722368061")
@@ -290,5 +291,6 @@ def test_p224_scalar_mult(p224, p224_test_value):
     k_int = int(p224_test_value["k"], 10)
     k_bytes = k_int.to_bytes((k_int.bit_length() + 7) // 8, "big")
     gen_x, gen_y = p224.scalar_base_mult(k_bytes)
+
     assert gen_x == int(p224_test_value["x"], 16)
     assert gen_y == int(p224_test_value["y"], 16)
