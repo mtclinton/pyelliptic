@@ -44,6 +44,549 @@ p256Zero31 = [
     two31m2,
 ]
 
+p256_precomputed = [
+    0x11522878,
+    0xE730D41,
+    0xDB60179,
+    0x4AFE2FF,
+    0x12883ADD,
+    0xCADDD88,
+    0x119E7EDC,
+    0xD4A6EAB,
+    0x3120BEE,
+    0x1D2AAC15,
+    0xF25357C,
+    0x19E45CDD,
+    0x5C721D0,
+    0x1992C5A5,
+    0xA237487,
+    0x154BA21,
+    0x14B10BB,
+    0xAE3FE3,
+    0xD41A576,
+    0x922FC51,
+    0x234994F,
+    0x60B60D3,
+    0x164586AE,
+    0xCE95F18,
+    0x1FE49073,
+    0x3FA36CC,
+    0x5EBCD2C,
+    0xB402F2F,
+    0x15C70BF,
+    0x1561925C,
+    0x5A26704,
+    0xDA91E90,
+    0xCDC1C7F,
+    0x1EA12446,
+    0xE1ADE1E,
+    0xEC91F22,
+    0x26F7778,
+    0x566847E,
+    0xA0BEC9E,
+    0x234F453,
+    0x1A31F21A,
+    0xD85E75C,
+    0x56C7109,
+    0xA267A00,
+    0xB57C050,
+    0x98FB57,
+    0xAA837CC,
+    0x60C0792,
+    0xCFA5E19,
+    0x61BAB9E,
+    0x589E39B,
+    0xA324C5,
+    0x7D6DEE7,
+    0x2976E4B,
+    0x1FC4124A,
+    0xA8C244B,
+    0x1CE86762,
+    0xCD61C7E,
+    0x1831C8E0,
+    0x75774E1,
+    0x1D96A5A9,
+    0x843A649,
+    0xC3AB0FA,
+    0x6E2E7D5,
+    0x7673A2A,
+    0x178B65E8,
+    0x4003E9B,
+    0x1A1F11C2,
+    0x7816EA,
+    0xF643E11,
+    0x58C43DF,
+    0xF423FC2,
+    0x19633FFA,
+    0x891F2B2,
+    0x123C231C,
+    0x46ADD8C,
+    0x54700DD,
+    0x59E2B17,
+    0x172DB40F,
+    0x83E277D,
+    0xB0DD609,
+    0xFD1DA12,
+    0x35C6E52,
+    0x19EDE20C,
+    0xD19E0C0,
+    0x97D0F40,
+    0xB015B19,
+    0x449E3F5,
+    0xE10C9E,
+    0x33AB581,
+    0x56A67AB,
+    0x577734D,
+    0x1DDDC062,
+    0xC57B10D,
+    0x149B39D,
+    0x26A9E7B,
+    0xC35DF9F,
+    0x48764CD,
+    0x76DBCCA,
+    0xCA4B366,
+    0xE9303AB,
+    0x1A7480E7,
+    0x57E9E81,
+    0x1E13EB50,
+    0xF466CF3,
+    0x6F16B20,
+    0x4BA3173,
+    0xC168C33,
+    0x15CB5439,
+    0x6A38E11,
+    0x73658BD,
+    0xB29564F,
+    0x3F6DC5B,
+    0x53B97E,
+    0x1322C4C0,
+    0x65DD7FF,
+    0x3A1E4F6,
+    0x14E614AA,
+    0x9246317,
+    0x1BC83ACA,
+    0xAD97EED,
+    0xD38CE4A,
+    0xF82B006,
+    0x341F077,
+    0xA6ADD89,
+    0x4894ACD,
+    0x9F162D5,
+    0xF8410EF,
+    0x1B266A56,
+    0xD7F223,
+    0x3E0CB92,
+    0xE39B672,
+    0x6A2901A,
+    0x69A8556,
+    0x7E7C0,
+    0x9B7D8D3,
+    0x309A80,
+    0x1AD05F7F,
+    0xC2FB5DD,
+    0xCBFD41D,
+    0x9CEB638,
+    0x1051825C,
+    0xDA0CF5B,
+    0x812E881,
+    0x6F35669,
+    0x6A56F2C,
+    0x1DF8D184,
+    0x345820,
+    0x1477D477,
+    0x1645DB1,
+    0xBE80C51,
+    0xC22BE3E,
+    0xE35E65A,
+    0x1AEB7AA0,
+    0xC375315,
+    0xF67BC99,
+    0x7FDD7B9,
+    0x191FC1BE,
+    0x61235D,
+    0x2C184E9,
+    0x1C5A839,
+    0x47A1E26,
+    0xB7CB456,
+    0x93E225D,
+    0x14F3C6ED,
+    0xCCC1AC9,
+    0x17FE37F3,
+    0x4988989,
+    0x1A90C502,
+    0x2F32042,
+    0xA17769B,
+    0xAFD8C7C,
+    0x8191C6E,
+    0x1DCDB237,
+    0x16200C0,
+    0x107B32A1,
+    0x66C08DB,
+    0x10D06A02,
+    0x3FC93,
+    0x5620023,
+    0x16722B27,
+    0x68B5C59,
+    0x270FCFC,
+    0xFAD0ECC,
+    0xE5DE1C2,
+    0xEAB466B,
+    0x2FC513C,
+    0x407F75C,
+    0xBAAB133,
+    0x9705FE9,
+    0xB88B8E7,
+    0x734C993,
+    0x1E1FF8F,
+    0x19156970,
+    0xABD0F00,
+    0x10469EA7,
+    0x3293AC0,
+    0xCDC98AA,
+    0x1D843FD,
+    0xE14BFE8,
+    0x15BE825F,
+    0x8B5212,
+    0xEB3FB67,
+    0x81CBD29,
+    0xBC62F16,
+    0x2B6FCC7,
+    0xF5A4E29,
+    0x13560B66,
+    0xC0B6AC2,
+    0x51AE690,
+    0xD41E271,
+    0xF3E9BD4,
+    0x1D70AAB,
+    0x1029F72,
+    0x73E1C35,
+    0xEE70FBC,
+    0xAD81BAF,
+    0x9ECC49A,
+    0x86C741E,
+    0xFE6BE30,
+    0x176752E7,
+    0x23D416,
+    0x1F83DE85,
+    0x27DE188,
+    0x66F70B8,
+    0x181CD51F,
+    0x96B6E4C,
+    0x188F2335,
+    0xA5DF759,
+    0x17A77EB6,
+    0xFEB0E73,
+    0x154AE914,
+    0x2F3EC51,
+    0x3826B59,
+    0xB91F17D,
+    0x1C72949,
+    0x1362BF0A,
+    0xE23FDDF,
+    0xA5614B0,
+    0xF7D8F,
+    0x79061,
+    0x823D9D2,
+    0x8213F39,
+    0x1128AE0B,
+    0xD095D05,
+    0xB85C0C2,
+    0x1ECB2EF,
+    0x24DDC84,
+    0xE35E901,
+    0x18411A4A,
+    0xF5DDC3D,
+    0x3786689,
+    0x52260E8,
+    0x5AE3564,
+    0x542B10D,
+    0x8D93A45,
+    0x19952AA4,
+    0x996CC41,
+    0x1051A729,
+    0x4BE3499,
+    0x52B23AA,
+    0x109F307E,
+    0x6F5B6BB,
+    0x1F84E1E7,
+    0x77A0CFA,
+    0x10C4DF3F,
+    0x25A02EA,
+    0xB048035,
+    0xE31DE66,
+    0xC6ECAA3,
+    0x28EA335,
+    0x2886024,
+    0x1372F020,
+    0xF55D35,
+    0x15E4684C,
+    0xF2A9E17,
+    0x1A4A7529,
+    0xCB7BEB1,
+    0xB2A78A1,
+    0x1AB21F1F,
+    0x6361CCF,
+    0x6C9179D,
+    0xB135627,
+    0x1267B974,
+    0x4408BAD,
+    0x1CBFF658,
+    0xE3D6511,
+    0xC7D76F,
+    0x1CC7A69,
+    0xE7EE31B,
+    0x54FAB4F,
+    0x2B914F,
+    0x1AD27A30,
+    0xCD3579E,
+    0xC50124C,
+    0x50DAA90,
+    0xB13F72,
+    0xB06AA75,
+    0x70F5CC6,
+    0x1649E5AA,
+    0x84A5312,
+    0x329043C,
+    0x41C4011,
+    0x13D32411,
+    0xB04A838,
+    0xD760D2D,
+    0x1713B532,
+    0xBAA0C03,
+    0x84022AB,
+    0x6BCF5C1,
+    0x2F45379,
+    0x18AE070,
+    0x18C9E11E,
+    0x20BCA9A,
+    0x66F496B,
+    0x3EEF294,
+    0x67500D2,
+    0xD7F613C,
+    0x2DBBEB,
+    0xB741038,
+    0xE04133F,
+    0x1582968D,
+    0xBE985F7,
+    0x1ACBC1A,
+    0x1A6A939F,
+    0x33E50F6,
+    0xD665ED4,
+    0xB4B7BD6,
+    0x1E5A3799,
+    0x6B33847,
+    0x17FA56FF,
+    0x65EF930,
+    0x21DC4A,
+    0x2B37659,
+    0x450FE17,
+    0xB357B65,
+    0xDF5EFAC,
+    0x15397BEF,
+    0x9D35A7F,
+    0x112AC15F,
+    0x624E62E,
+    0xA90AE2F,
+    0x107EECD2,
+    0x1F69BBE,
+    0x77D6BCE,
+    0x5741394,
+    0x13C684FC,
+    0x950C910,
+    0x725522B,
+    0xDC78583,
+    0x40EEABB,
+    0x1FDE328A,
+    0xBD61D96,
+    0xD28C387,
+    0x9E77D89,
+    0x12550C40,
+    0x759CB7D,
+    0x367EF34,
+    0xAE2A960,
+    0x91B8BDC,
+    0x93462A9,
+    0xF469EF,
+    0xB2E9AEF,
+    0xD2CA771,
+    0x54E1F42,
+    0x7AAA49,
+    0x6316ABB,
+    0x2413C8E,
+    0x5425BF9,
+    0x1BED3E3A,
+    0xF272274,
+    0x1F5E7326,
+    0x6416517,
+    0xEA27072,
+    0x9CEDEA7,
+    0x6E7633,
+    0x7C91952,
+    0xD806DCE,
+    0x8E2A7E1,
+    0xE421E1A,
+    0x418C9E1,
+    0x1DBC890,
+    0x1B395C36,
+    0xA1DC175,
+    0x1DC4EF73,
+    0x8956F34,
+    0xE4B5CF2,
+    0x1B0D3A18,
+    0x3194A36,
+    0x6C2641F,
+    0xE44124C,
+    0xA2F4EAA,
+    0xA8C25BA,
+    0xF927ED7,
+    0x627B614,
+    0x7371CCA,
+    0xBA16694,
+    0x417BC03,
+    0x7C0A7E3,
+    0x9C35C19,
+    0x1168A205,
+    0x8B6B00D,
+    0x10E3EDC9,
+    0x9C19BF2,
+    0x5882229,
+    0x1B2B4162,
+    0xA5CEF1A,
+    0x1543622B,
+    0x9BD433E,
+    0x364E04D,
+    0x7480792,
+    0x5C9B5B3,
+    0xE85FF25,
+    0x408EF57,
+    0x1814CFA4,
+    0x121B41B,
+    0xD248A0F,
+    0x3B05222,
+    0x39BB16A,
+    0xC75966D,
+    0xA038113,
+    0xA4A1769,
+    0x11FBC6C,
+    0x917E50E,
+    0xEEC3DA8,
+    0x169D6EAC,
+    0x10C1699,
+    0xA416153,
+    0xF724912,
+    0x15CD60B7,
+    0x4ACBAD9,
+    0x5EFC5FA,
+    0xF150ED7,
+    0x122B51,
+    0x1104B40A,
+    0xCB7F442,
+    0xFBB28FF,
+    0x6AC53CA,
+    0x196142CC,
+    0x7BF0FA9,
+    0x957651,
+    0x4E0F215,
+    0xED439F8,
+    0x3F46BD5,
+    0x5ACE82F,
+    0x110916B6,
+    0x6DB078,
+    0xFFD7D57,
+    0xF2ECAAC,
+    0xCA86DEC,
+    0x15D6B2DA,
+    0x965ECC9,
+    0x1C92B4C2,
+    0x1F3811,
+    0x1CB080F5,
+    0x2D8B804,
+    0x19D1C12D,
+    0xF20BD46,
+    0x1951FA7,
+    0xA3656C3,
+    0x523A425,
+    0xFCD0692,
+    0xD44DDC8,
+    0x131F0F5B,
+    0xAF80E4A,
+    0xCD9FC74,
+    0x99BB618,
+    0x2DB944C,
+    0xA673090,
+    0x1C210E1,
+    0x178C8D23,
+    0x1474383,
+    0x10B8743D,
+    0x985A55B,
+    0x2E74779,
+    0x576138,
+    0x9587927,
+    0x133130FA,
+    0xBE05516,
+    0x9F4D619,
+    0xBB62570,
+    0x99EC591,
+    0xD9468FE,
+    0x1D07782D,
+    0xFC72E0B,
+    0x701B298,
+    0x1863863B,
+    0x85954B8,
+    0x121A0C36,
+    0x9E7FEDF,
+    0xF64B429,
+    0x9B9D71E,
+    0x14E2F5D8,
+    0xF858D3A,
+    0x942EEA8,
+    0xDA5B765,
+    0x6EDAFFF,
+    0xA9D18CC,
+    0xC65E4BA,
+    0x1C747E86,
+    0xE4EA915,
+    0x1981D7A1,
+    0x8395659,
+    0x52ED4E2,
+    0x87D43B7,
+    0x37AB11B,
+    0x19D292CE,
+    0xF8D4692,
+    0x18C3053F,
+    0x8863E13,
+    0x4C146C0,
+    0x6BDF55A,
+    0x4E4457D,
+    0x16152289,
+    0xAC78EC2,
+    0x1A59C5A2,
+    0x2028B97,
+    0x71C2D01,
+    0x295851F,
+    0x404747B,
+    0x878558D,
+    0x7D29AA4,
+    0x13D8341F,
+    0x8DAEFD7,
+    0x139C972D,
+    0x6B7EA75,
+    0xD4A9DDE,
+    0xFF163D8,
+    0x81D55D7,
+    0xA5BEF68,
+    0xB7B30D8,
+    0xBE73D6F,
+    0xAA88141,
+    0xD976C81,
+    0x7E7A9CC,
+    0x18BEB771,
+    0xD773CBD,
+    0x13F51951,
+    0x9D0C177,
+    0x1C49A78,
+]
+
 
 def non_zero_to_all_ones(x):
     return (ctypes.c_uint32(x - 1).value >> 31) - 1
@@ -659,6 +1202,94 @@ class p256Curve(CurveParams):
         for i, v in enumerate(scalar_bytes):
             out[len(scalar_bytes) - (1 + i)] = v
 
+    def p256_get_scalar(self, out: bytearray, in_bytes: bytes) -> None:
+        n = int.from_bytes(in_bytes, byteorder="big")
+        scalar_bytes = bytearray()
+
+        if n >= self.N:
+            n %= self.N
+            scalar_bytes = n.to_bytes((n.bit_length() + 7) // 8, byteorder="big")
+        else:
+            scalar_bytes = in_bytes
+
+        for i, v in enumerate(scalar_bytes):
+            out[len(scalar_bytes) - (1 + i)] = v
+
+    def p256_get_bit(self, scalar, bit):
+        return (scalar[bit >> 3] >> (bit & 7)) & 1
+
+    def p256_select_affine_point(self, x_out, y_out, table, index):
+        for i in range(len(x_out)):
+            x_out[i] = 0
+        for i in range(len(y_out)):
+            y_out[i] = 0
+
+        for i in range(1, 16):
+            mask = i ^ index
+            mask |= mask >> 2
+            mask |= mask >> 1
+            mask &= 1
+            mask -= 1
+            for j in range(len(x_out)):
+                x_out[j] |= table[0] & mask
+                table = table[1:]
+            for j in range(len(y_out)):
+                y_out[j] |= table[0] & mask
+                table = table[1:]
+
+    def p256_scalar_base_mult(self, x_out, y_out, z_out, scalar):
+        n_is_infinity_mask = (1 << 32) - 1
+        pIsNoninfiniteMask, mask, tableOffset = 0, 0, 0
+        px, py, tx, ty, tz = (
+            [0] * p256Limbs,
+            [0] * p256Limbs,
+            [0] * p256Limbs,
+            [0] * p256Limbs,
+            [0] * p256Limbs,
+        )
+        for i in range(len(x_out)):
+            x_out[i] = 0
+        for i in range(len(y_out)):
+            y_out[i] = 0
+        for i in range(len(z_out)):
+            z_out[i] = 0
+
+        for i in range(32):
+            if i != 0:
+                self.p256_point_double(x_out, y_out, z_out, x_out, y_out, z_out)
+            table_offset = 0
+            for j in range(0, 33, 32):
+                bit0 = self.p256_get_bit(scalar, 31 - i + j)
+                bit1 = self.p256_get_bit(scalar, 95 - i + j)
+                bit2 = self.p256_get_bit(scalar, 159 - i + j)
+                bit3 = self.p256_get_bit(scalar, 223 - i + j)
+                index = bit0 | (bit1 << 1) | (bit2 << 2) | (bit3 << 3)
+
+                self.p256_select_affine_point(
+                    px, py, p256_precomputed[table_offset:], index
+                )
+                table_offset += 30 * p256Limbs
+
+                self.p256_point_add_mixed(tx, ty, tz, x_out, y_out, z_out, px, py)
+                p256_copy_conditional(x_out, px, n_is_infinity_mask)
+                p256_copy_conditional(y_out, py, n_is_infinity_mask)
+                p256_copy_conditional(z_out, p256One, n_is_infinity_mask)
+
+                p_is_noninfinite_mask = non_zero_to_all_ones(index)
+                mask = p_is_noninfinite_mask & ~n_is_infinity_mask
+                p256_copy_conditional(x_out, tx, mask)
+                p256_copy_conditional(y_out, ty, mask)
+                p256_copy_conditional(z_out, tz, mask)
+                n_is_infinity_mask &= ~p_is_noninfinite_mask
+
+    def scalar_base_mult(self, scalar):
+        scalar_reversed = bytearray(32)
+        self.p256_get_scalar(scalar_reversed, scalar)
+
+        x1, y1, z1 = [0] * p256Limbs, [0] * p256Limbs, [0] * p256Limbs
+        self.p256_scalar_base_mult(x1, y1, z1, scalar_reversed)
+        return self.p256_to_affine(x1, y1, z1)
+
     def scalar_mult(self, bigX, bigY, scalar):
         scalarReversed = [0] * 32
         self.get_scalar(scalarReversed, scalar)
@@ -882,72 +1513,3 @@ class p256Curve(CurveParams):
                 out[i] = 0
             tmp >>= 28
             i += 1
-
-
-P256 = p256Curve()
-P256.P = int(
-    "115792089210356248762697446949407573530086143415290314195533631308867097853951",
-    10,
-)
-P256.N = int(
-    "115792089210356248762697446949407573529996955224135760342422259061068512044369",
-    10,
-)
-P256.B = int(
-    "5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b",
-    16,
-)
-P256.Gx = int(
-    "6b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c296",
-    16,
-)
-P256.Gy = int(
-    "4fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5",
-    16,
-)
-P256.BitSize = 256
-
-P256.p256RInverse = int(
-    "7fffffff00000001fffffffe8000000100000000ffffffff0000000180000000", 16
-)
-
-k = int(
-    "115792089210356248762697446949407573529996955224135760342422259061068512044368", 10
-)
-l = (k.bit_length() + 7) // 8
-
-print(P256.is_on_curve(P256.Gx, P256.Gy))
-gen_x, gen_y = P256.scalar_mult(
-    int("6B17D1F2E12C4247F8BCE6E563A440F277037D812DEB33A0F4A13945D898C296", 16),
-    int("B01CBD1C01E58065711814B583F061E9D431CCA994CEA1313449BF97C840AE0A", 16),
-    int.to_bytes(k, byteorder="big", length=l),
-)
-print(gen_x, gen_y)
-P256Generic = CurveParams()
-P256Generic.P = int(
-    "115792089210356248762697446949407573530086143415290314195533631308867097853951",
-    10,
-)
-P256Generic.N = int(
-    "115792089210356248762697446949407573529996955224135760342422259061068512044369",
-    10,
-)
-P256Generic.B = int(
-    "5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b",
-    16,
-)
-P256Generic.Gx = int(
-    "6b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c296",
-    16,
-)
-P256Generic.Gy = int(
-    "4fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5",
-    16,
-)
-P256Generic.BitSize = 256
-gen_x, gen_y = P256Generic.scalar_mult(
-    int("6B17D1F2E12C4247F8BCE6E563A440F277037D812DEB33A0F4A13945D898C296", 16),
-    int("B01CBD1C01E58065711814B583F061E9D431CCA994CEA1313449BF97C840AE0A", 16),
-    int.to_bytes(k, byteorder="big", length=l),
-)
-print(gen_x, gen_y)

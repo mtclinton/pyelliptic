@@ -349,3 +349,15 @@ def test_p256_scalar_mult(p256, p256_generic, p256_test_value):
 
     assert xx == gen_x
     assert yy == gen_y
+
+
+@pytest.mark.parametrize("p256_test_value", p256_test_data)
+def test_p256_scalar_base_mult(p256, p256_generic, p256_test_value):
+    k_int = int(p256_test_value["k"], 10)
+    K_len = (k_int.bit_length() + 7) // 8
+    xx, yy = p256.scalar_base_mult(
+        int.to_bytes(k_int, byteorder="big", length=K_len),
+    )
+
+    assert xx == int(p256_test_value["x"], 16)
+    assert yy == int(p256_test_value["y"], 16)
