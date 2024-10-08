@@ -1,5 +1,6 @@
 import pytest
 from p256 import p256Curve
+from elliptic import CurveParams
 
 p256_test_data = [
     {
@@ -286,6 +287,32 @@ P256.Gy = int(
     16,
 )
 P256.BitSize = 256
+P256.p256RInverse = int(
+    "7fffffff00000001fffffffe8000000100000000ffffffff0000000180000000", 16
+)
+
+P256Generic = CurveParams()
+P256Generic.P = int(
+    "115792089210356248762697446949407573530086143415290314195533631308867097853951",
+    10,
+)
+P256Generic.N = int(
+    "115792089210356248762697446949407573529996955224135760342422259061068512044369",
+    10,
+)
+P256Generic.B = int(
+    "5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b",
+    16,
+)
+P256Generic.Gx = int(
+    "6b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c296",
+    16,
+)
+P256Generic.Gy = int(
+    "4fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5",
+    16,
+)
+P256Generic.BitSize = 256
 
 
 @pytest.fixture
@@ -293,16 +320,32 @@ def p256():
     return P256
 
 
+@pytest.fixture
+def p256_generic():
+    return P256Generic
+
+
 @pytest.mark.parametrize("p256_test_value", p256_test_data)
 def test_p256_on_curve(p256, p256_test_value):
     assert p256.is_on_curve(
         int(p256_test_value["x"], 16), int(p256_test_value["y"], 16)
     )
-k =int("115792089210356248762697446949407573529996955224135760342422259061068512044368",10)
-l = (k.bit_length() + 7) // 8
-print(k)
-P256.scalar_mult(
-    int('6B17D1F2E12C4247F8BCE6E563A440F277037D812DEB33A0F4A13945D898C296', 16),
-    int("B01CBD1C01E58065711814B583F061E9D431CCA994CEA1313449BF97C840AE0A", 16),
-    int.to_bytes(k, byteorder="big", length=l)
-)
+
+
+@pytest.mark.parametrize("p256_test_value", p256_test_data)
+def test_p256_scalar_mult(p256, p256_generic, p256_test_value):
+    k_int = int(p256_test_value["k"], 10)
+    K_len = (k_int.bit_length() + 7) // 8
+    xx, yy = p256.scalar_mult(
+        int(p256_test_value["x"], 16),
+        int(p256_test_value["y"], 16),
+        int.to_bytes(k_int, byteorder="big", length=K_len),
+    )
+    gen_x, gen_y = p256.scalar_mult(
+        int(p256_test_value["x"], 16),
+        int(p256_test_value["y"], 16),
+        int.to_bytes(k_int, byteorder="big", length=K_len),
+    )
+
+    assert xx == gen_x
+    assert yy == gen_y
