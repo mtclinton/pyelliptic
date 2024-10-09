@@ -343,6 +343,7 @@ class p224Curve(CurveParams):
         p224_reduce(x3)
 
         p224_add(x3, x3, self.b)
+
         p224_contract(x3, x3)
 
         p224_square(y, y, tmp)

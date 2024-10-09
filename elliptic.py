@@ -212,7 +212,7 @@ def generate_key(curve):
             + priv[2:]
         )
 
-        x, y = curve.scalar_base_mlt(priv)
+        x, y = curve.scalar_base_mult(priv)
 
     return priv, x, y
 

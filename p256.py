@@ -619,9 +619,6 @@ def p256_reduce_degree(out, tmp):
 
     i = 2
     while True:
-        # print("-----------------------------------")
-        # print(i)
-        # print(tmp2)
         tmp2[i] = ctypes.c_uint32(tmp[i - 2] >> 32).value >> 25
         tmp2[i] += ctypes.c_uint32(tmp[i - 1]).value >> 28
         tmp2[i] += (
@@ -655,8 +652,6 @@ def p256_reduce_degree(out, tmp):
     tmp2[17] += ctypes.c_uint32(tmp[16]).value >> 29
     tmp2[17] += ctypes.c_uint32(tmp[16] >> 32).value << 3
     tmp2[17] += carry
-    # print(tmp2)
-    # print('-'*10)
 
     i = 0
     while True:
@@ -858,7 +853,7 @@ def p256_square(out, in_):
     tmp[14] = in_[6] * (in_[8] << 1) + in_[7] * (in_[7] << 1)
     tmp[15] = in_[7] * (in_[8] << 1)
     tmp[16] = in_[8] * in_[8]
-    # print(tmp)
+
     p256_reduce_degree(out, tmp)
 
 
@@ -1399,13 +1394,6 @@ class p256Curve(CurveParams):
         p256_diff(tmp2, x, delta)
         p256_mul(alpha, tmp, tmp2)
         p256_scalar_3(alpha)
-        # print(tmp)
-        # print(alpha)
-        # print(beta)
-        # print(delta)
-        # print(gamma)
-        # print(x)
-        # breakpoint()
 
         p256_sum(tmp, y, z)
         p256_square(tmp, tmp)
