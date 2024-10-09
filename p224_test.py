@@ -1,4 +1,7 @@
 import pytest
+import binascii
+
+from elliptic import generate_key, marshall, unmarshall
 from p224 import p224_from_big, p224Curve
 
 p224_test_data = [
@@ -271,6 +274,9 @@ P224.B = int("b4050a850c04b3abf54132565044b0b7d7bfd8ba270b39432355ffb4", 16)
 P224.Gx = int("b70e0cbd6bb4bf7f321390b94a03c1d356c21122343280d6115c1d21", 16)
 P224.Gy = int("bd376388b5f723fb4c22dfe6cd4375a05a07476444d5819985007e34", 16)
 P224.BitSize = 224
+p224_from_big(P224.gx, P224.Gx)
+p224_from_big(P224.gy, P224.Gy)
+p224_from_big(P224.b, P224.B)
 
 
 @pytest.fixture
@@ -294,3 +300,19 @@ def test_p224_scalar_mult(p224, p224_test_value):
 
     assert gen_x == int(p224_test_value["x"], 16)
     assert gen_y == int(p224_test_value["y"], 16)
+
+
+def test_p224_marshall(p224):
+    priv, x, y = generate_key(p224)
+    serialized = marshall(p224, x, y)
+    xx, yy = unmarshall(p224, serialized)
+    assert x == xx
+    assert y == yy
+
+
+def test_p224_overflow(p224):
+    point_data = binascii.unhexlify(
+        "049B535B45FB0A2072398A6831834624C7E32CCFD5A4B933BCEAF77F1DD945E08BBE5178F5EDF5E733388F196D2A631D2E075BB16CBFEEA15B"
+    )
+    x, y = unmarshall(P224, point_data)
+    assert P224.is_on_curve(x, y)

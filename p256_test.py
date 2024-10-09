@@ -1,6 +1,9 @@
 import pytest
+import binascii
+
 from p256 import p256Curve
 from elliptic import CurveParams
+from elliptic import generate_key, marshall, unmarshall
 
 p256_test_data = [
     {
@@ -361,3 +364,19 @@ def test_p256_scalar_base_mult(p256, p256_generic, p256_test_value):
 
     assert xx == int(p256_test_value["x"], 16)
     assert yy == int(p256_test_value["y"], 16)
+
+
+def test_p256_marshall(p256):
+    priv, x, y = generate_key(p256)
+    serialized = marshall(p256, x, y)
+    xx, yy = unmarshall(p256, serialized)
+    assert x == xx
+    assert y == yy
+
+
+def test_p256_overflow(p256):
+    point_data = binascii.unhexlify(
+        "049B535B45FB0A2072398A6831834624C7E32CCFD5A4B933BCEAF77F1DD945E08BBE5178F5EDF5E733388F196D2A631D2E075BB16CBFEEA15B"
+    )
+    x, y = unmarshall(p256, point_data)
+    assert not p256.is_on_curve(x, y)

@@ -1,5 +1,8 @@
 import pytest
+import binascii
+
 from elliptic import CurveParams
+from elliptic import generate_key, marshall, unmarshall
 
 p384_test_data = [
     {
@@ -307,3 +310,19 @@ def test_p384_scalar_mult(p384, p384_test_value):
     gen_x, gen_y = p384.scalar_base_mult(k_bytes)
     assert gen_x == int(p384_test_value["x"], 16)
     assert gen_y == int(p384_test_value["y"], 16)
+
+
+def test_p384_marshall(p384):
+    priv, x, y = generate_key(p384)
+    serialized = marshall(p384, x, y)
+    xx, yy = unmarshall(p384, serialized)
+    assert x == xx
+    assert y == yy
+
+
+def test_p384_overflow(p384):
+    point_data = binascii.unhexlify(
+        "049B535B45FB0A2072398A6831834624C7E32CCFD5A4B933BCEAF77F1DD945E08BBE5178F5EDF5E733388F196D2A631D2E075BB16CBFEEA15B"
+    )
+    x, y = unmarshall(p384, point_data)
+    assert not p384.is_on_curve(x, y)
