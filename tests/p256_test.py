@@ -1,9 +1,9 @@
 import pytest
 import binascii
 
-from p256 import p256Curve
-from elliptic import CurveParams
-from elliptic import generate_key, marshall, unmarshall
+from pyelliptic.p256 import p256Curve
+from pyelliptic.elliptic import CurveParams
+from pyelliptic.elliptic import generate_key, marshall, unmarshall
 
 p256_test_data = [
     {

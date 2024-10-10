@@ -1,8 +1,8 @@
 import pytest
 import binascii
 
-from elliptic import CurveParams
-from elliptic import generate_key, marshall, unmarshall
+from pyelliptic.elliptic import CurveParams
+from pyelliptic.elliptic import generate_key, marshall, unmarshall
 
 p521_test_data = [
     {

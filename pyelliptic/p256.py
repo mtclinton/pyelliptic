@@ -1,4 +1,4 @@
-from elliptic import CurveParams
+from pyelliptic.elliptic import CurveParams
 import ctypes
 
 p256Limbs = 9
