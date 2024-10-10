@@ -1,8 +1,8 @@
 import pytest
 import binascii
 
-from elliptic import generate_key, marshall, unmarshall
-from p224 import p224_from_big, p224Curve
+from pyelliptic.elliptic import generate_key, marshall, unmarshall
+from pyelliptic.p224 import p224_from_big, p224Curve
 
 p224_test_data = [
     {
