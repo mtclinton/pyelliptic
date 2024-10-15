@@ -1,0 +1,13 @@
+[project]
+name = "pyelliptic"
+version = "0.0.1"
+requires-python = ">=3.8"
+authors = [
+  {name = "Max Clinton"},
+]
+maintainers = [
+  {name = "Max Clinton"}
+]
+description = "Python elliptic curve library"
+readme = "README.md"
+keywords = ["elliptic curve"]
